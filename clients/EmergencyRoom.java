@@ -4,8 +4,8 @@ import domain.Employee;
 
 public class EmergencyRoom {
 
-    public EmergencyRoom(Employee employee) {
-     employee.performDuties();
+    public void emergencySituation(Employee employee){
+        employee.performDuties();
     }
 
 }

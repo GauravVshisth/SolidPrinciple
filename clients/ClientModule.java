@@ -2,6 +2,7 @@ package clients;
 
 import domain.Doctor;
 import domain.Employee;
+import domain.Nurse;
 import reporting.EmployeeReportFormatter;
 import reporting.FormatType;
 
@@ -24,7 +25,12 @@ public class ClientModule {
     public static void main(final String[] args) {
         final Employee tarun = new Doctor(1, "Tarun", "emergency", true);
         ClientModule.hireNewEmployee(tarun);
-        final EmergencyRoom emergencyRoom = new EmergencyRoom(tarun);
+        final EmergencyRoom emergencyRoom = new EmergencyRoom();
+        emergencyRoom.emergencySituation(tarun);
         ClientModule.printEmployeeReport(tarun,FormatType.XML);
+        final Employee suzen = new Nurse(2,"Suzen","emergency",true);
+        ClientModule.hireNewEmployee(suzen);
+        emergencyRoom.emergencySituation(suzen);
+
     }
 }
