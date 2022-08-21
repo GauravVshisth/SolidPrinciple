@@ -1,7 +1,7 @@
 package domain;
 
 // Pojo java class
-public class Employee {
+public abstract class Employee {
     private int id;
     private String name;
     private String department;
@@ -13,6 +13,7 @@ public class Employee {
         this.department = department;
         this.working = working;
     }
+    public abstract void performDuties();
 
     @Override
     public String toString() {

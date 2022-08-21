@@ -5,3 +5,8 @@
 *.class
 *.classpath
 *.jar
+misc.xml
+workspace.xml
+misc.xml
+vcs.xml
+modules.xml

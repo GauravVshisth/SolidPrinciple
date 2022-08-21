@@ -1,5 +1,6 @@
 package clients;
 
+import domain.Doctor;
 import domain.Employee;
 import reporting.EmployeeReportFormatter;
 import reporting.FormatType;
@@ -21,8 +22,9 @@ public class ClientModule {
     }
 
     public static void main(final String[] args) {
-        final Employee tarun = new Employee(1, "Tarun", "accounting", true);
+        final Employee tarun = new Doctor(1, "Tarun", "emergency", true);
         ClientModule.hireNewEmployee(tarun);
+        final EmergencyRoom emergencyRoom = new EmergencyRoom(tarun);
         ClientModule.printEmployeeReport(tarun,FormatType.XML);
     }
 }
